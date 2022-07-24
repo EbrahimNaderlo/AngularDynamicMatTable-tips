@@ -1,0 +1,43 @@
+h2 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+tips-mat-table {
+  height: 70vh;
+  border-radius: 6px;
+  margin: 10px;
+  border: 1px solid gainsboro;
+}
+
+/* Conditional Class & Overwrite Style */
+:host ::ng-deep .conditional-class .mat-table .row-selection {
+  background-color: rgb(7, 140, 163) !important; /* for over write */
+  border-radius: 5px;
+  .mat-cell {
+    color: white !important;
+  }
+}
+
+/* Style Element Inside Table */
+:host ::ng-deep tips-mat-table .mat-table mat-row {
+  cursor: pointer;
+  border: 0;
+}
+
+.section button {
+  margin: 5px;
+}
+
+.section {
+  background-color: whitesmoke;
+}
+
+.tab {
+  height: 80vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(206, 211, 216);
+}

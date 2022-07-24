@@ -1,0 +1,36 @@
+<button color="primary" mat-raised-button (click)="toggleColumns()">
+  toggle Columns
+</button>
+<hr />
+<div class="header">visable Columns (click on item to hide)</div>
+<div id="chips-1">
+  <span
+    class="item"
+    style="background-color: seagreen; color: white"
+    *ngFor="let item of visableColumns"
+    (click)="visableOrHide(item, 'hiden')"
+    >{{ item }}</span
+  >
+</div>
+<hr *ngIf="hiddenColumns.length == 0 || visableColumns.length == 0" />
+<div class="header">hidden Columns (click on item to make visible)</div>
+<div id="chips-2">
+  <span
+    class="item"
+    (click)="visableOrHide(item, 'visible')"
+    *ngFor="let item of hiddenColumns"
+    >{{ item }}</span
+  >
+</div>
+<tips-mat-table
+  [ngStyle]="{ height: '700px', margin: '20px', 'border-radius': '10px' }"
+  [columns]="columns"
+  [dir]="'rtl'"
+  [dataSource]="dataSource$"
+  [tableSetting]="tableSetting"
+  [rowActionMenuItems]="rowActionMenu"
+  [rowContextMenuItems]="rowActionMenu"
+  [pagination]="pagination"
+  (onTableEvent)="tableEvent($event)"
+>
+</tips-mat-table>

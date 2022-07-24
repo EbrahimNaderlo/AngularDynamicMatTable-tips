@@ -1,0 +1,13 @@
+*WIP*
+<tips-mat-table
+  [ngStyle]="{ height: '700px', margin: '20px', 'border-radius': '10px' }"
+  [columns]="columns"
+  [dir]="'rtl'"
+  [dataSource]="dataSource$"
+  [tableSetting]="tableSetting"
+  [rowActionMenuItems]="rowActionMenu"
+  [rowContextMenuItems]="rowActionMenu"
+  [pagination]="pagination"
+  (onTableEvent)="tableEvent($event)"
+>
+</tips-mat-table>

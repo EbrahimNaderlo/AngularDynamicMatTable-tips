@@ -1,0 +1,12 @@
+<tips-mat-table
+  (keydown.enter)="createNewRowInEditMode()"
+  [ngStyle]="{ height: '700px', margin: '20px', 'border-radius': '10px' }"
+  [columns]="columns"
+  [dir]="'rtl'"
+  [tableSetting]="tableSetting"
+  [dataSource]="dataSource$"
+  [rowActionMenuItems]="rowActionMenu"
+  [toolbarItems]="toolbarItems"
+  (onTableEvent)="tableEvent($event)"
+>
+</tips-mat-table>

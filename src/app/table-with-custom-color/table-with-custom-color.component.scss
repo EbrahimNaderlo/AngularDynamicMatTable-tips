@@ -1,0 +1,67 @@
+::ng-deep .color-picker .saturation-lightness {
+  display: none !important;
+}
+::ng-deep .rgba-text {
+  display: none !important;
+}
+::ng-deep .color-picker .hex-text {
+  display: none !important;
+}
+
+input[type="color"] {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 100%;
+}
+input[type="color" i] {
+  -webkit-appearance: square-button;
+  width: 44px;
+  height: 23px;
+  background-color: buttonface;
+  cursor: default;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(169, 169, 169);
+  border-image: initial;
+  padding: 1px 2px;
+}
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  padding: 1px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  border: 2px solid #9a9a9a;
+  margin-left: 10px;
+  border-radius: 5px;
+  text-emphasis-color: red;
+  height: 50px;
+  width: 100px;
+  margin-left: 10px !important;
+}
+input,
+textarea,
+select,
+button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  font-weight: 400;
+  color: white;
+}
+
+.font-color {
+    color: black !important;
+}

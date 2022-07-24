@@ -1,0 +1,32 @@
+<div style="display: flex; justify-content: center">
+  <mat-button-toggle-group [(value)]="selectionMode">
+    <mat-button-toggle value="none">none</mat-button-toggle>
+    <mat-button-toggle value="multi">multi</mat-button-toggle>
+    <mat-button-toggle value="single">single</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<tips-mat-table
+  [ngStyle]="{ height: '500px', margin: '20px', 'border-radius': '10px' }"
+  [columns]="columns"
+  [dir]="'rtl'"
+  [dataSource]="dataSource$"
+  [tableSetting]="tableSetting"
+  [rowActionMenuItems]="rowActionMenu"
+  [rowContextMenuItems]="rowActionMenu"
+  [pagination]="pagination"
+  [rowSelectionMode]="selectionMode"
+  [rowSelectionModel]="selectionModel"
+  (onTableEvent)="tableEvent($event)"
+>
+</tips-mat-table>
+<div
+  style="
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid gray;
+  "
+  *ngFor="let item of selectionLogs"
+>
+  {{ item }}
+</div>

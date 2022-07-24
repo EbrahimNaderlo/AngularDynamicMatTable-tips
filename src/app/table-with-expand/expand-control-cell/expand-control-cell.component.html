@@ -1,0 +1,9 @@
+<div>
+  <button mat-button color="primary" (click)="onExpandRow()">
+    <mat-icon>{{
+      this.row?.options?.expanded == true ? "unfold_less" : "unfold_more"
+    }}</mat-icon>
+  </button>
+  <b>|</b>
+  {{ row[column.name] }}
+</div>

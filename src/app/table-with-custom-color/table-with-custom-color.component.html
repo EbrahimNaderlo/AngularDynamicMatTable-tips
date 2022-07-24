@@ -1,0 +1,54 @@
+<tips-mat-table
+  [ngStyle]="{ height: '700px', margin: '20px', 'border-radius': '10px' }"
+  [columns]="columns"
+  [dir]="'rtl'"
+  [dataSource]="dataSource$"
+  [tableSetting]="tableSetting"
+  [rowActionMenuItems]="rowActionMenu"
+  [rowContextMenuItems]="rowActionMenu"
+  [pagination]="pagination"
+  (onTableEvent)="tableEvent($event)"
+>
+</tips-mat-table>
+<div>
+  <input
+    matInput
+    [value]="HeaderStyle"
+    [(colorPicker)]="color1"
+    [cpColorMode]="'color'"
+    [style.background]="color1"
+    (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)"
+    (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)"
+  />
+
+  <input
+    matInput
+    [value]="fontStyle"
+    [(colorPicker)]="color2"
+    [cpColorMode]="'color'"
+    [style.background]="color2"
+    (cpSliderDragStart)="onCellStyle('cpSliderDragStart', $event)"
+    (cpSliderDragEnd)="onCellStyle('cpSliderDragEnd', $event)"
+  />
+  <input
+    matInput
+    class="font-color"
+    [value]="RowStyle"
+    [(colorPicker)]="color3"
+    [cpColorMode]="'color'"
+    [style.background]="color3"
+    (cpSliderDragStart)="onARowStyle('cpSliderDragStart', $event)"
+    (cpSliderDragEnd)="onARowStyle('cpSliderDragEnd', $event)"
+  />
+
+  <input
+    matInput
+    class="font-color"
+    [value]="AltRowStyle"
+    [(colorPicker)]="color4"
+    [cpColorMode]="'color'"
+    [style.background]="color4"
+    (cpSliderDragStart)="onRowStyle('cpSliderDragStart', $event)"
+    (cpSliderDragEnd)="onRowStyle('cpSliderDragEnd', $event)"
+  />
+</div>

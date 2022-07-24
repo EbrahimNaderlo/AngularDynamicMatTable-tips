@@ -1,0 +1,38 @@
+<h2>Tips Mat Table (@v1.0.11)</h2>
+<mat-tab-group mat-align-tabs="start" [(selectedIndex)]="tabIndex">
+  <mat-tab label="Simple Table">
+    <div class="tab" *ngIf="tabIndex == 0">
+      <app-simple-table></app-simple-table>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with Expand Component">
+    <div class="tab" *ngIf="tabIndex == 1">
+      <app-table-with-expand></app-table-with-expand>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with Inline Edit and Insert">
+    <div class="tab" *ngIf="tabIndex == 2">
+      <app-table-with-inline-edit></app-table-with-inline-edit>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with Selection">
+    <div class="tab" *ngIf="tabIndex == 3">
+      <app-table-with-selection></app-table-with-selection>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with Simple Filter">
+    <div class="tab" *ngIf="tabIndex == 4">
+      <app-table-with-simple-filter></app-table-with-simple-filter>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with hidden Columns">
+    <div class="tab" *ngIf="tabIndex == 5">
+      <app-table-with-hidden-columns></app-table-with-hidden-columns>
+    </div>
+  </mat-tab>
+  <mat-tab label="Table with Custome Color">
+    <div class="tab" *ngIf="tabIndex == 6">
+      <app-table-with-custom-color></app-table-with-custom-color>
+    </div>
+  </mat-tab>
+</mat-tab-group>
